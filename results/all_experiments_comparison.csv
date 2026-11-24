@@ -1,0 +1,5 @@
+Experiment,Test Accuracy (%)
+Baseline ResNet18,93.7204
+Full Fine-tuning ResNet18,92.50616581293872
+Partial Fine-tuning without Weights,89.96
+Partial Fine-tuning + Class Weights,89.3379

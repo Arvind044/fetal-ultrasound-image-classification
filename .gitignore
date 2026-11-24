@@ -1,0 +1,26 @@
+# Dataset images
+data/Images/
+
+# Model checkpoints
+models/*.pth
+
+# Jupyter files
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Original working files
+Original/
+data/FETAL_PLANES_DB_data.xlsx
