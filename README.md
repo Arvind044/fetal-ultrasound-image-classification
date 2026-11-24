@@ -29,9 +29,47 @@ The project uses the **FETAL_PLANES_DB** dataset.
 
 Note: The original dataset images are not included in this repository. Download the dataset from the official source and place the images and metadata in the `data/` directory.
 
-## 3. Project Structure
+
+
+## 3. Project Workflow
+
+The overall workflow of the project is illustrated below:
+
+```mermaid
+flowchart TD
+    A["FETAL_PLANES_DB Dataset<br/>12,400 Ultrasound Images"] --> B["Data Understanding<br/>Metadata and Class Analysis"]
+    B --> C["Data Preprocessing<br/>Resize, Normalize, Augmentation"]
+    C --> D["Patient-Level Data Splitting"]
+    
+    D --> E["Training Dataset"]
+    D --> F["Validation Dataset"]
+    D --> G["Test Dataset"]
+    
+    E --> H["ResNet18 Transfer Learning"]
+    F --> H
+    
+    H --> I["Baseline Model"]
+    H --> J["Partial Fine-Tuning"]
+    H --> K["Full Fine-Tuning"]
+    
+    I --> L["Model Evaluation"]
+    J --> L
+    K --> L
+    G --> L
+    
+    L --> M["Accuracy, Precision, Recall, F1-score"]
+    L --> N["Confusion Matrix and Error Analysis"]
+    M --> O["Experiment Comparison"]
+    N --> O
+```
+
+
 
 ```text
+
+
+## 3. Project Structure
+
 Fetal_Ultrasound_Project/
 │
 ├── data/
